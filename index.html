@@ -42,4 +42,18 @@
             </p2>
         </div>
       </div>
+      <script>
+        
+        function toggleContent(button) {
+          const content = button.nextElementSibling;
+          content.style.display = content.style.display === 'block' ? 'none' : 'block';
+          
+        
+          if (content.style.display === 'block') {
+            button.style.background = ' #4C514A'; // Тёмно-зелёный при открытом
+          } else {
+            button.style.background = '#D5D5D5'; // Обычный зелёный при закрытом
+          }
+        }
+        </script>
 </body>

@@ -29,3 +29,7 @@ button{
 .details-title:hover {
   background: #545754; 
 }
+
+body {
+    background-color: rgb(113, 128, 126);
+}

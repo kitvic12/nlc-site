@@ -4,6 +4,7 @@ p {
 
 p2 {
     font-size: 18px;
+    color: black
 }
 
 button{
@@ -21,11 +22,10 @@ button{
 
   .details-title {
     cursor: pointer;
-    background: #f0f0f0;
+    background: #79857d;
     padding: 5px 10px;
     border: 1px solid #ddd;
   }
-
-  .details-title:hover {
-    background: #e0e0e0;
-  }
+.details-title:hover {
+  background: #545754; 
+}

@@ -24,10 +24,22 @@ a {
     color: rgb(25, 129, 214)
 }
 
-button{
-    background-color: blue;
+button {
+    padding: 8px 15px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: #0066cc;
     color: white;
-    font-size: 22.5px;
+}
+
+.btn-secondary {
+    background: #ddd;
+    color: #333;
 }
 
 

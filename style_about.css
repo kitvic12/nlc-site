@@ -1,0 +1,9 @@
+p {
+    font-size: 24px;
+}
+
+body {
+    background-image: url('background_about.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}

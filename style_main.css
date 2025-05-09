@@ -104,7 +104,7 @@ footer {
   }
   
   .logo-img {
-    height: 20px; /* Размер логотипа */
+    height: 100px; /* Размер логотипа */
     width: auto;
     display: block;
   }

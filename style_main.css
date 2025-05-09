@@ -80,6 +80,7 @@ footer {
     background-color: #333;
     color: white;
     padding: 40px 0 30px;
+    margin-top: 80px;
     font-family: Arial, sans-serif;
   }
   
@@ -96,6 +97,11 @@ footer {
     flex: 1;
     min-width: 200px;
     margin-bottom: 30px;
+  }
+
+  .footer-spacer {
+    height: 80px; 
+    background: transparent;
   }
   
   .footer-column h3 {

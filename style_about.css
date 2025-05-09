@@ -9,6 +9,10 @@ p1 {
     color: white;
 }
 
+ul {
+    color:white
+}
+
 body {
     background-image: url('background.png');
     background-repeat: no-repeat;
@@ -33,7 +37,7 @@ h4 {
 }
 
 a {
-    color: rgb(25, 129, 214)
+    color: white
 }
 
 button{

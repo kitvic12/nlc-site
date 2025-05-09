@@ -155,3 +155,11 @@ footer {
     display: block;
     margin-top: 60px;
 }
+
+ol {
+    color: white;
+}
+
+ul {
+    color: white;
+}

@@ -135,18 +135,17 @@ footer {
     border-top: 1px solid #555;
     color: #aaa;
     font-size: 14px;
-    position: relative;
   }
   
   .logo-copyright-container {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
+    display: inline-block;
+    text-align: center;
   }
   
   .footer-logo-img {
-    height: 1em; 
+    display: block;
+    height: 16px; /* Высота как у текста */
     width: auto;
-    vertical-align: middle;
+    margin: 0 auto 5px; /* Центрирование и отступ снизу */
   }
+  

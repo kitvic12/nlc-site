@@ -3,7 +3,5 @@ p {
 }
 
 body {
-    background-image: url('background_about.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-color: bisque;
 }

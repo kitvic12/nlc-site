@@ -23,10 +23,12 @@ navButtons.forEach(button => {
     button.classList.remove('btn-success');
     button.classList.add('btn-light');
     button.style.color = 'black';
+    button.style.background = "white"
     } else {
     button.classList.remove('btn-light');
     button.classList.add('btn-success');
     button.style.color = 'white';
+    button.style.background = "blue"
     }
 });
 }

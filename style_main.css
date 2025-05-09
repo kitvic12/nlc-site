@@ -77,55 +77,11 @@ div {
 }
 
 footer {
-    background-color: #333; /* Тёмный фон футера */
-    color: white; /* Белый текст */
-    padding: 30px 0;
-    margin-top: 40px; /* Отступ от основного контента */
-    font-family: Arial, sans-serif;
-  }
-  
-  .footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  .footer-logo {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 15px;
-  }
-  
-  .footer-links {
-    display: flex;
-    gap: 30px;
-  }
-  
-  .footer-column {
-    flex: 1;
-    min-width: 200px;
-    margin-bottom: 20px;
-  }
-  
-  .footer-column h3 {
-    font-size: 18px;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #555;
-    padding-bottom: 5px;
-  }
-  
-  .footer-column a {
-    color: #ccc;
-    text-decoration: none;
-    display: block;
-    margin-bottom: 8px;
-    transition: color 0.3s;
-  }
-  
-  .footer-column a:hover {
+    background-color: #333;
     color: white;
+    padding: 30px 0 20px;
+    margin-top: 40px;
+    font-family: Arial, sans-serif;
   }
   
   .copyright {
@@ -135,17 +91,21 @@ footer {
     border-top: 1px solid #555;
     color: #aaa;
     font-size: 14px;
+    position: relative;
   }
   
-  .logo-copyright-container {
-    display: inline-block;
-    text-align: center;
+  .logo-above-copyright {
+    position: absolute;
+    top: -10px; /* Поднимаем лого над линией */
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333; /* Фон как у футера */
+    padding: 0 10px;
   }
   
-  .footer-logo-img {
-    display: block;
-    height: 16px; /* Высота как у текста */
+  .logo-img {
+    height: 20px; /* Размер логотипа */
     width: auto;
-    margin: 0 auto 5px; /* Центрирование и отступ снизу */
+    display: block;
   }
   

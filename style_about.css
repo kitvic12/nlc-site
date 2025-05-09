@@ -1,7 +1,26 @@
 p {
     font-size: 24px;
+    color: white;
 }
 
 body {
-    background-color: bisque;
+    background-image: url('background.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h1 {
+    color: white;
+}
+
+h2 {
+    color: white;
+}
+
+h3 {
+    color: white;
+}
+
+a {
+    color: rgb(25, 129, 214)
 }

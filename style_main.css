@@ -20,6 +20,10 @@ p2 {
     color: white
 }
 
+a {
+    color: rgb(25, 129, 214)
+}
+
 button{
     background-color: blue;
     color: white;

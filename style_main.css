@@ -56,9 +56,9 @@ body {
 .details-content {
     display: none;
     padding: 15px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #000000;
     margin-top: 5px;
-    background-color: #f8f8f8;
+    background-color: '-';
     border-radius: 0 0 4px 4px;
   }
   .details-title {

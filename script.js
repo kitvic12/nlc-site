@@ -30,3 +30,4 @@ navButtons.forEach(button => {
     }
 });
 }
+window.onload = highlightCurrentPageButton;

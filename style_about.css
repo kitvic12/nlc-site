@@ -3,6 +3,12 @@ p {
     color: white;
 }
 
+p1 {
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+}
+
 body {
     background-image: url('background.png');
     background-repeat: no-repeat;

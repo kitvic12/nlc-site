@@ -79,33 +79,73 @@ div {
 footer {
     background-color: #333;
     color: white;
-    padding: 30px 0 20px;
-    margin-top: 40px;
+    padding: 40px 0 30px;
     font-family: Arial, sans-serif;
   }
   
-  .copyright {
-    text-align: center;
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px solid #555;
-    color: #aaa;
-    font-size: 14px;
-    position: relative;
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px;
   }
   
-  .logo-above-copyright {
+  .footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 30px;
+  }
+  
+  .footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #555;
+    padding-bottom: 5px;
+  }
+  
+  .footer-column a {
+    color: #ccc;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+    transition: color 0.3s;
+  }
+  
+  .footer-column a:hover {
+    color: white;
+  }
+  
+ 
+  .copyright-section {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 40px;
+    position: relative;
+    border-top: 1px solid #555;
+  }
+  
+  .footer-logo {
     position: absolute;
-    top: -10px; /* Поднимаем лого над линией */
+    top: -50px; 
     left: 50%;
     transform: translateX(-50%);
-    background: #333; /* Фон как у футера */
-    padding: 0 10px;
   }
   
-  .logo-img {
-    height: 100px; /* Размер логотипа */
-    width: auto;
+  .footer-logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    object-fit: contain;
+    background: #333;
+    padding: 5px;
+  }
+  
+  .copyright-text {
+    color: #aaa;
+    font-size: 14px;
     display: block;
+    margin-top: 60px;
   }
-  

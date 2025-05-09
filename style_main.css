@@ -30,7 +30,7 @@ button{
     font-size: 22.5px;
 }
 
-.details-content {
+/* .details-content {
     display: none;
     padding: 10px;
     border: 1px solid #ddd;
@@ -45,10 +45,43 @@ button{
   }
 .details-title:hover {
   background: #545754; 
-}
+} */
 
 body {
     background-image: url('background.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
+.details-content {
+    display: none;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    margin-top: 5px;
+    background-color: #f8f8f8;
+    border-radius: 0 0 4px 4px;
+  }
+  .details-title {
+    cursor: pointer;
+    background: #79857d; /* Синий цвет фона */
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    text-align: left;
+    transition: background 0.3s;
+    position: relative;
+  }
+  .details-title:after {
+    content: '+';
+    position: absolute;
+    right: 15px;
+    font-size: 20px;
+  }
+  .details-title.active:after {
+    content: '-';
+  }
+  .details-title:hover {
+    background: #545754;
+  }

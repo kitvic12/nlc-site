@@ -24,3 +24,9 @@ h3 {
 a {
     color: rgb(25, 129, 214)
 }
+
+button{
+    background-color: blue;
+    color: white;
+    font-size: 22.5px;
+}

@@ -27,6 +27,11 @@ h3 {
     color: white;
 }
 
+h4 {
+    color: white;
+    font-size: 24;
+}
+
 a {
     color: rgb(25, 129, 214)
 }

@@ -87,3 +87,7 @@ body {
     background: #545754;
     border-color: #000000;
   }
+
+div {
+    margin-top: 7px;
+}

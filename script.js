@@ -1,10 +1,19 @@
 function toggleContent(button) {
-    const content = button.nextElementSibling;
-    content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    // Переключаем класс active для кнопки
+    button.classList.toggle('active');
     
+    // Получаем связанный контент
+    const content = button.nextElementSibling;
+    
+    // Переключаем видимость контента
     if (content.style.display === 'block') {
-      button.style.background = '#367c39'; 
+      content.style.display = 'none';
+      button.style.background = '#4285f4';
     } else {
-      button.style.background = '#4CAF50'; 
+      content.style.display = 'block';
+      button.style.background = '#3367d6';
     }
+    
+    // Отменяем стандартное поведение (на всякий случай)
+    return false;
   }

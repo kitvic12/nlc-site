@@ -6,8 +6,6 @@ function highlightCurrentPageButton() {
         if (buttonPath === currentPath) {
         button.classList.remove('btn-success');
         button.classList.add('btn-light');
-        console.log("dick")
-        button.style.color = 'black';
         button.style.background = "white"
         } else {
         console.log("black")
@@ -18,15 +16,7 @@ function highlightCurrentPageButton() {
         }
     });
     }
-    window.onload = highlightCurrentPageButton;
-
-
-
-
-
-
-
-
+    window.onload = highlightCurrentPageButton
 
 const firebaseConfig = {
     apiKey: "AIzaSyC6VJP5KMoKlBPiKmZlada4sV7aypDxoSE",

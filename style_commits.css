@@ -132,8 +132,13 @@ body {
     background: #0055aa;
 }
 
-p {
+p1 {
     color: white;
+    font-size: 24px;
+}
+
+p {
+    color: black;
     font-size: 24px;
 }
 

@@ -59,7 +59,7 @@ function loadChanges() {
                 addChangeToDOM(change);
             });
         } else {
-            changesContainer.innerHTML = '<p>Нет изменений для отображения</p>';
+            changesContainer.innerHTML = '<p1>Нет изменений для отображения</p1>';
         }
     });
 }

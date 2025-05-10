@@ -32,11 +32,10 @@ const firebaseConfig = {
 
 
 
-// Инициализация Firebase
 firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
 
-// Функции для работы с модальными окнами
+
 function openModal(id) {
     document.getElementById(id).style.display = 'block';
 }
@@ -45,7 +44,7 @@ function closeModal(id) {
     document.getElementById(id).style.display = 'none';
 }
 
-// Загрузка изменений из Firebase
+
 function loadChanges() {
     const changesRef = database.ref('changes');
     
@@ -65,7 +64,7 @@ function loadChanges() {
     });
 }
 
-// Добавление изменения в DOM
+
 function addChangeToDOM(change) {
     const changesContainer = document.getElementById('changes-container');
     
@@ -83,7 +82,7 @@ function addChangeToDOM(change) {
     changesContainer.prepend(changeCard);
 }
 
-// Сохранение изменения в Firebase
+
 function saveChange(version, text) {
     const changesRef = database.ref('changes');
     const newChangeRef = changesRef.push();
@@ -95,11 +94,9 @@ function saveChange(version, text) {
     });
 }
 
-// Инициализация при загрузке страницы
+
 document.addEventListener('DOMContentLoaded', function() {
     loadChanges();
-
-    // Обработчики событий для модальных окон
     document.getElementById('addChangeBtn').addEventListener('click', function() {
         openModal('loginModal');
     });
@@ -138,8 +135,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (changeText) {
             saveChange(version, changeText);
-            
-            // Очищаем поля
             document.getElementById('version').value = '';
             document.getElementById('changeText').value = '';
             

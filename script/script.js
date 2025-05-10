@@ -34,4 +34,3 @@ navButtons.forEach(button => {
 }
 window.onload = highlightCurrentPageButton;
 
-// FileSystemDirectoryEntry;fs'd;

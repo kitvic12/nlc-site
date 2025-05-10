@@ -116,6 +116,7 @@ function highlightCurrentPageButton() {
         button.style.color = 'black';
         button.style.background = "white"
         } else {
+        console.log("black")
         button.classList.remove('btn-light');
         button.classList.add('btn-success');
         button.style.color = 'white';

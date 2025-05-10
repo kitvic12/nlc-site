@@ -1,5 +1,3 @@
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 import { firebaseConfig} from "./fb_config";
 
   firebase.initializeApp(firebaseConfig);
@@ -114,6 +112,7 @@ function highlightCurrentPageButton() {
         if (buttonPath === currentPath) {
         button.classList.remove('btn-success');
         button.classList.add('btn-light');
+        console.log("dick")
         button.style.color = 'black';
         button.style.background = "white"
         } else {

@@ -132,6 +132,11 @@ body {
     background: #0055aa;
 }
 
+.error {
+    color: white;
+    font-size: 24px;
+}
+
 .modal {
     display: none;
     position: fixed;

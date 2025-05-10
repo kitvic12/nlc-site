@@ -1,3 +1,33 @@
+function highlightCurrentPageButton() {
+    const currentPath = window.location.pathname.split('/').pop();
+    const navButtons = document.querySelectorAll('.nav-btn');
+    navButtons.forEach(button => {
+        const buttonPath = button.getAttribute('data-href').split('/').pop();  
+        if (buttonPath === currentPath) {
+        button.classList.remove('btn-success');
+        button.classList.add('btn-light');
+        console.log("dick")
+        button.style.color = 'black';
+        button.style.background = "white"
+        } else {
+        console.log("black")
+        button.classList.remove('btn-light');
+        button.classList.add('btn-success');
+        button.style.color = 'white';
+        button.style.background = "blue"
+        }
+    });
+    }
+    window.onload = highlightCurrentPageButton;
+
+
+
+
+
+
+
+
+
 const firebaseConfig = {
     apiKey: "AIzaSyC6VJP5KMoKlBPiKmZlada4sV7aypDxoSE",
     authDomain: "commits-for-nlc-site.firebaseapp.com",
@@ -114,24 +144,3 @@ const firebaseConfig = {
   });
 
 
-function highlightCurrentPageButton() {
-    const currentPath = window.location.pathname.split('/').pop();
-    const navButtons = document.querySelectorAll('.nav-btn');
-    navButtons.forEach(button => {
-        const buttonPath = button.getAttribute('data-href').split('/').pop();  
-        if (buttonPath === currentPath) {
-        button.classList.remove('btn-success');
-        button.classList.add('btn-light');
-        console.log("dick")
-        button.style.color = 'black';
-        button.style.background = "white"
-        } else {
-        console.log("black")
-        button.classList.remove('btn-light');
-        button.classList.add('btn-success');
-        button.style.color = 'white';
-        button.style.background = "blue"
-        }
-    });
-    }
-    window.onload = highlightCurrentPageButton;

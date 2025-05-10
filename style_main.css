@@ -47,7 +47,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 24px;
     line-height: 1.6;
-    background-image: url('background.png');
+    background-image: url('./image/background.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
 }

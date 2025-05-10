@@ -132,7 +132,7 @@ body {
     background: #0055aa;
 }
 
-.error {
+p {
     color: white;
     font-size: 24px;
 }

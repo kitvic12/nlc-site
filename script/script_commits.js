@@ -55,7 +55,7 @@ const firebaseConfig = {
 
   function renderChanges(changesData) {
       if (!changesData) {
-          changesContainer.innerHTML = '<div class="error">Нет данных об изменениях</div>';
+          changesContainer.innerHTML = '<div class="error"><p>Нет данных об изменениях</p></div>';
           return;
       }
 

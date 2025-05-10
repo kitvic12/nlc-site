@@ -1,4 +1,4 @@
-import { firebaseConfig} from "./fb_config";
+import {firebaseConfig} from "./fb_config";
 
   firebase.initializeApp(firebaseConfig);
   const database = firebase.database();

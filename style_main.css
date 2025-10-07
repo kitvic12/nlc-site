@@ -7,7 +7,6 @@
   --accent-color: rgb(25, 129, 214);
 }
 
-
 * {
   box-sizing: border-box;
 }
@@ -26,7 +25,6 @@ body {
   border-color: var(--background-color);
   padding: 0 15px;
 }
-
 
 h1, h2 {
   color: var(--text-color);
@@ -61,19 +59,18 @@ a:hover {
   text-decoration: underline;
 }
 
-
 .button-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px;
-  margin: 30px 0;
+  gap: 12px;
+  margin: 20px 0;
   flex-wrap: wrap;
   width: 100%;
 }
 
 button {
-  padding: 12px 25px;
+  padding: 10px 20px;
   margin: 0;
   border: none;
   border-radius: 6px;
@@ -82,8 +79,8 @@ button {
   transition: all 0.3s ease;
   min-height: 44px;
   min-width: 140px;
-  flex-shrink: 0;
   width: auto;
+  flex-shrink: 0;
 }
 
 .btn-primary {
@@ -94,7 +91,6 @@ button {
 .btn-primary:hover {
   background: #0052a3;
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .btn-secondary {
@@ -105,9 +101,7 @@ button {
 .btn-secondary:hover {
   background: #c0c0c0;
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 
 .details-content {
   display: none;
@@ -154,11 +148,9 @@ button {
   transform: translateY(-2px);
 }
 
-
 div {
   margin-top: 10px;
 }
-
 
 ol, ul {
   color: white;
@@ -170,7 +162,6 @@ ol li, ul li {
   margin-bottom: 8px;
   font-size: clamp(14px, 2vw, 18px);
 }
-
 
 footer {
   background-color: var(--footer-bg);
@@ -222,7 +213,6 @@ footer {
   text-decoration: underline;
 }
 
-
 .copyright-section {
   width: 100%;
   text-align: center;
@@ -255,7 +245,6 @@ footer {
   margin-top: 60px;
 }
 
-
 @media (max-width: 1024px) {
   body {
     max-width: 100%;
@@ -271,7 +260,6 @@ footer {
     flex: 0 1 calc(50% - 30px);
   }
 }
-
 
 @media (max-width: 768px) {
   body {
@@ -295,9 +283,15 @@ footer {
     font-size: 16px;
   }
   
+  .button-container {
+    flex-direction: row;
+    gap: 8px;
+  }
+  
   button {
-    width: 100%;
-    margin: 5px 0;
+    width: auto;
+    margin: 0;
+    min-width: 140px;
   }
   
   .footer-logo {
@@ -309,7 +303,6 @@ footer {
     height: 80px;
   }
 }
-
 
 @media (max-width: 480px) {
   body {
@@ -328,6 +321,15 @@ footer {
     font-size: 16px;
   }
   
+  .button-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  button {
+    width: 200px;
+  }
+  
   .footer-column h3 {
     font-size: 16px;
   }
@@ -341,7 +343,6 @@ footer {
   }
 }
 
-
 @media (min-width: 1200px) {
   body {
     max-width: 1400px;
@@ -352,7 +353,6 @@ footer {
   }
 }
 
-
 @media (prefers-color-scheme: dark) {
   .btn-secondary {
     background: #444;
@@ -360,14 +360,12 @@ footer {
   }
 }
 
-
 @media (prefers-reduced-motion: reduce) {
   * {
     transition: none !important;
     animation: none !important;
   }
 }
-
 
 @media (min-width: 1400px) {
   body {

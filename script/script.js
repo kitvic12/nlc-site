@@ -3,12 +3,12 @@ function toggleContent(button) {
     const content = button.nextElementSibling;
     if (content.style.display === 'block') {
       content.style.display = 'none';
-      button.style.background = '#79857d'; 
-      button.style.borderColor = '#5a665e'; 
+      button.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+      button.style.borderColor = 'none';
     } else {
       content.style.display = 'block';
-      button.style.background = '#5a665e';
-      button.style.borderColor = '#3d4741';
+      button.style.background = '#79857d'; 
+      button.style.borderColor = '#5a665e'; 
     }
     return false;
   }

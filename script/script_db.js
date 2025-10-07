@@ -17,3 +17,45 @@ function highlightCurrentPageButton() {
     });
     }
     window.onload = highlightCurrentPageButton;
+
+
+
+        async function loadObservations() {
+            try {
+                const response = await fetch('https://anttech.ddns.net/kitvic/api/data');
+                const data = await response.json();
+                
+                const app = document.getElementById('app');
+                app.innerHTML = '';
+                
+                data.data.forEach(dateGroup => {
+                    const dateDiv = document.createElement('div');
+                    dateDiv.className = 'date-section';
+                    dateDiv.innerHTML = `<h2>📅 ${dateGroup.date}</h2>`;
+                    
+                    Object.entries(dateGroup.users).forEach(([user, observations]) => {
+                        const firstObs = observations[0];
+                        const obsDiv = document.createElement('a');
+                        obsDiv.className = 'observation-link';
+                        obsDiv.innerHTML = `
+                            <strong>👤 ${user}</strong> | 
+                            📍 ${firstObs.place} | 
+                            🕒 ${firstObs.time}
+                        `;
+                        
+                        const obsId = btoa(`${dateGroup.date}_${user}`).replace(/=/g, '');
+                        obsDiv.href = `observation.html?id=${obsId}&date=${dateGroup.date}&user=${user}&place=${firstObs.place}`;
+                        
+                        dateDiv.appendChild(obsDiv);
+                    });
+                    
+                    app.appendChild(dateDiv);
+                });
+                
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('app').innerHTML = 'Ошибка загрузки';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', loadObservations);

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_obs.css">
+    <link href="./image/icon.png" rel="icon" type="image/png">
+    <script src="./script/script_obs.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Наблюдение</title>
+</head>
+<body>
+    <button class="back-btn" onclick="window.history.back()">← Назад</button>
+    <div id="observation-details">
+    <div class="header-info">
+        <h1>Подробная информация по наблюдению</h1>
+        <h2>👤 Пользователь: <span id="user-name"></span></h2>
+        <h3>📅 Дата: <span id="observation-date"></span></h3>
+        <h3>📍 Место: <span id="observation-place"></span></h3>
+    </div>
+    <table class="observation-table">
+        <thead>
+            <tr>
+                <th>Время</th>
+                <th>Погода</th>
+                <th>Яркость</th>
+                <th>Интенсивность</th>
+            </tr>
+        </thead>
+        <tbody id="observations-table">
+        </tbody>
+    </table>
+    <footer>
+        <div1 class="footer-container">
+            <div1 class="footer-column">
+                <div1 class="footer-logo">NLC Site</div1>
+                <p>Сайт для исследования серебристых облаков</p>
+            </div1>
+          
+            <div1 class="footer-column">
+                <h3>Контакты</h3>
+                <a href="mailto:kitvic12@gmail.com">kitvic12@gmail.com</a>
+                <a href="https://t.me/kitvic12">ТГ - @kitvic12</a>
+            </div1>
+          
+            <div1 class="footer-column">
+                <h3>Соцсети</h3>
+                <a href="https://t.me/kitvic_nlc_chanel">ТГ-канал</a>
+                <a href="https://t.me/kitvic_nlc_bot">Сам бот</a>
+            </div1>
+            </div1>
+          
+            <div1 class="copyright-section">
+            <div1 class="footer-logo">
+                <img src="./image/icon.png" alt="Логотип сайта">
+            </div1>
+            <span class="copyright-text">&copy; 2025 NlC Site. Все права защищены.</span>
+            </div1>    
+    </footer>
+</body>
+</html>

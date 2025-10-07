@@ -2,8 +2,10 @@
   --primary-color: #0066cc;
   --secondary-color: #ddd;
   --text-color: white;
-  --background-color: #333;
-  --accent-color: white;
+  --background-color: #1a1a2e;
+  --card-bg: rgba(42, 42, 74, 0.85);
+  --accent-color: #8a2be2;
+  --footer-bg: #16213e;
   --container-padding: clamp(16px, 4vw, 24px);
   --section-margin: clamp(20px, 5vw, 40px);
 }
@@ -24,6 +26,7 @@ body {
   background-position: center;
   max-width: 1400px;
   min-height: 100vh;
+  background-color: var(--background-color);
 }
 
 .container {
@@ -31,29 +34,83 @@ body {
   margin: 0 auto;
   padding: 0 var(--container-padding);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.content-block {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 25px;
+  margin: 15px 0;
+  border: 1px solid rgba(138, 43, 226, 0.3);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.split-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 25px;
+  margin: 15px 0;
+  border: 1px solid rgba(138, 43, 226, 0.3);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.split-text {
+  flex: 1;
+  text-align: left;
+}
+
+.split-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.split-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(138, 43, 226, 0.3);
 }
 
 h1, h2, h3, h4 {
   color: var(--text-color);
   margin: clamp(16px, 3vw, 24px) 0;
   text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 h1 {
   font-size: clamp(28px, 6vw, 42px);
+  background: linear-gradient(135deg, #a8c0ff 0%, #c2e9fb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 h2 {
   font-size: clamp(24px, 5vw, 36px);
+  color: #a78bfa;
 }
 
 h3 {
   font-size: clamp(20px, 4vw, 28px);
+  color: #a78bfa;
 }
 
 h4 {
   font-size: clamp(20px, 4vw, 24px);
   font-weight: lighter;
+  color: #c4b5fd;
 }
 
 p {
@@ -62,6 +119,7 @@ p {
   margin: clamp(12px, 2vw, 16px) 0;
   line-height: 1.7;
   text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
 }
 
 p1 {
@@ -71,6 +129,7 @@ p1 {
   display: block;
   margin: clamp(10px, 1.5vw, 12px) 0;
   text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
 }
 
 ul {
@@ -79,6 +138,7 @@ ul {
   text-align: center;
   list-style-position: inside;
   padding-left: 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
 }
 
 ul li {
@@ -89,7 +149,7 @@ ul li {
 }
 
 a {
-  color: var(--accent-color);
+  color: #93c5fd;
   font-size: clamp(16px, 3vw, 20px);
   text-decoration: none;
   transition: all 0.3s ease;
@@ -97,7 +157,7 @@ a {
 }
 
 a:hover {
-  color: #cccccc;
+  color: #bfdbfe;
   text-decoration: underline;
 }
 
@@ -123,6 +183,7 @@ button {
   min-width: 140px;
   flex-shrink: 0;
   width: auto;
+  font-weight: bold;
 }
 
 .btn-primary {
@@ -131,9 +192,9 @@ button {
 }
 
 .btn-primary:hover {
-  background: #0052a3;
+  background: var(--primary-color);
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.4);
 }
 
 .btn-secondary {
@@ -142,9 +203,9 @@ button {
 }
 
 .btn-secondary:hover {
-  background: #c0c0c0;
+  background: var(--secondary-color);
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(221, 221, 221, 0.4);
 }
 
 .section {
@@ -154,12 +215,13 @@ button {
 }
 
 footer {
-  background-color: var(--background-color);
+  background-color: var(--footer-bg);
   color: white;
   padding: clamp(30px, 6vw, 40px) 0 clamp(20px, 4vw, 30px);
   margin-top: clamp(40px, 8vw, 80px);
   font-family: Arial, sans-serif;
   text-align: center;
+  border-top: 3px solid rgba(138, 43, 226, 0.3);
 }
 
 .footer-container {
@@ -188,13 +250,14 @@ footer {
 .footer-column h3 {
   font-size: clamp(16px, 3vw, 18px);
   margin-bottom: clamp(12px, 2vw, 15px);
-  border-bottom: 1px solid #555;
+  border-bottom: 2px solid rgba(138, 43, 226, 0.5);
   padding-bottom: clamp(4px, 1vw, 8px);
   text-align: center;
+  color: #a78bfa;
 }
 
 .footer-column a {
-  color: #ccc;
+  color: #cbd5e1;
   text-decoration: none;
   display: block;
   margin-bottom: clamp(6px, 1.5vw, 10px);
@@ -211,33 +274,39 @@ footer {
 .copyright-section {
   width: 100%;
   text-align: center;
-  margin-top: 20px;
-  padding-top: 40px;
+  margin-top: 40px;
+  padding-top: 80px;
   position: relative;
-  border-top: 1px solid #555;
+  border-top: 1px solid rgba(138, 43, 226, 0.3);
 }
 
 .footer-logo {
-  position: absolute;
-  top: -110px;
+  margin-right: auto;
+  margin-left: 50%;
+  top: -100px;
   left: 50%;
   transform: translateX(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .footer-logo img {
-  width: clamp(80px, 10vw, 100px);
-  height: clamp(80px, 10vw, 100px);
-  border-radius: 5px;
-  object-fit: contain;
-  background: #333;
-  padding: 5px;
+  width: clamp(55px, 10vw, 75px);
+  height: clamp(55px, 10vw, 75px);
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--footer-bg);
+  padding: 3px;
+  border: 3px solid rgba(138, 43, 226, 0.5);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
 .copyright-text {
-  color: #aaa;
+  color: #94a3b8;
   font-size: clamp(12px, 2vw, 14px);
   display: block;
-  margin-top: 60px;
+  margin-top: 20px;
 }
 
 @media (max-width: 768px) {
@@ -248,6 +317,20 @@ footer {
   
   .footer-column {
     min-width: 100%;
+  }
+  
+  .split-container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .split-text {
+    text-align: center;
+  }
+  
+  .content-block {
+    padding: 20px;
   }
   
   .button-container {
@@ -264,6 +347,11 @@ footer {
   .footer-logo {
     top: -90px;
   }
+  
+  .footer-logo img {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -277,6 +365,14 @@ footer {
   
   p {
     font-size: 16px;
+  }
+  
+  .content-block {
+    padding: 15px;
+  }
+  
+  .split-container {
+    padding: 15px;
   }
   
   button {
@@ -297,5 +393,9 @@ footer {
   
   .footer-container {
     max-width: 1400px;
+  }
+  
+  .container {
+    gap: 30px;
   }
 }

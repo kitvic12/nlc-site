@@ -7,8 +7,8 @@ function toggleContent(button) {
       button.style.borderColor = 'none';
     } else {
       content.style.display = 'block';
-      button.style.background = '#79857d'; 
-      button.style.borderColor = '#5a665e'; 
+      button.style.background = 'linear-gradient(135deg, #667eea 100%, #764ba2 0%)'; 
+      button.style.borderColor = 'none'; 
     }
     return false;
   }

@@ -286,35 +286,39 @@ footer {
 .copyright-section {
   width: 100%;
   text-align: center;
-  margin-top: 20px;
-  padding-top: 40px;
+  margin-top: 40px;
+  padding-top: 80px;
   position: relative;
   border-top: 1px solid rgba(138, 43, 226, 0.3);
 }
 
 .footer-logo {
-  position: absolute;
-  top: -110px;
+  margin-right: auto;
+  margin-left: 50%;
+  top: -100px;
   left: 50%;
   transform: translateX(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .footer-logo img {
-  width: 75px;
-  height: 75px;
+  width: clamp(55px, 10vw, 75px);
+  height: clamp(55px, 10vw, 75px);
   border-radius: 50%;
   object-fit: cover;
   background: var(--footer-bg);
-  padding: 5px;
+  padding: 3px;
   border: 3px solid rgba(138, 43, 226, 0.5);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
 .copyright-text {
   color: #94a3b8;
-  font-size: clamp(12px, 1.5vw, 14px);
+  font-size: clamp(12px, 2vw, 14px);
   display: block;
-  margin-top: 60px;
+  margin-top: 20px;
 }
 
 @media (max-width: 1024px) {

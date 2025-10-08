@@ -4,26 +4,25 @@ function highlightCurrentPageButton() {
     navButtons.forEach(button => {
         const buttonPath = button.getAttribute('data-href').split('/').pop();  
         if (buttonPath === currentPath) {
-        button.classList.remove('btn-success');
-        button.classList.add('btn-light');
-        button.style.color = 'black';
-        button.style.background = "white"
+            button.classList.remove('btn-success');
+            button.classList.add('btn-light');
+            button.style.color = 'black';
+            button.style.background = "white";
         } else {
-        button.classList.remove('btn-light');
-        button.classList.add('btn-success');
-        button.style.color = 'white';
-        button.style.background = "blue"
+            button.classList.remove('btn-light');
+            button.classList.add('btn-success');
+            button.style.color = 'white';
+            button.style.background = "blue";
         }
     });
-    }
-    window.onload = highlightCurrentPageButton;
+}
 
-
+window.onload = highlightCurrentPageButton;
 
 async function loadObservations() {
     try {
         const local = 'http://localhost:5000/api/data';
-        const server = 'https://anttech.ddns.net/kitvic/api/data'
+        const server = 'https://anttech.ddns.net/kitvic/api/data';
         const response = await fetch(server);
         const data = await response.json();
         
@@ -36,13 +35,14 @@ async function loadObservations() {
             dateDiv.innerHTML = `<h2>📅 ${dateGroup.date}</h2>`;
             
             Object.entries(dateGroup.users).forEach(([user, observations]) => {
-                const firstObs = observations[0];
+                const sortedObservations = sortObservationsByTime(observations);
+                const firstObs = sortedObservations[0];
                 const obsDiv = document.createElement('a');
                 obsDiv.className = 'observation-link';
                 obsDiv.innerHTML = `
                     <strong>👤 ${user}</strong> | 
                     📍 ${firstObs.place} | 
-                    🕒 ${firstObs.time}
+                    🕒 Начало: ${firstObs.time}
                 `;
                 
                 const obsId = btoa(`${dateGroup.date}_${user}`).replace(/=/g, '');
@@ -58,6 +58,21 @@ async function loadObservations() {
         console.error('Error:', error);
         document.getElementById('app').innerHTML = 'Ошибка загрузки';
     }
+}
+
+function convertTimeToMinutes(timeStr) {
+    const [hours, minutes] = timeStr.split(':').map(Number);
+    return hours * 60 + minutes;
+}
+
+function sortObservationsByTime(observations) {
+    return observations.sort((a, b) => {
+        const timeA = convertTimeToMinutes(a.time);
+        const timeB = convertTimeToMinutes(b.time);
+        const adjustedA = timeA < 240 ? timeA + 1440 : timeA;
+        const adjustedB = timeB < 240 ? timeB + 1440 : timeB;
+        return adjustedA - adjustedB;
+    });
 }
 
 document.addEventListener('DOMContentLoaded', loadObservations);

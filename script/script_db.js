@@ -22,7 +22,9 @@ function highlightCurrentPageButton() {
 
 async function loadObservations() {
     try {
-        const response = await fetch('https://anttech.ddns.net/kitvic/api/data');
+        const local = 'http://localhost:5000/api/data';
+        const server = 'https://anttech.ddns.net/kitvic/api/data'
+        const response = await fetch(server);
         const data = await response.json();
         
         const app = document.getElementById('app');

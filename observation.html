@@ -12,25 +12,44 @@
 </head>
 <body>
     <button class="back-btn" onclick="window.history.back()">← Назад</button>
-    <div id="observation-details">
-    <div class="header-info">
-        <h1>Подробная информация по наблюдению</h1>
+    <h1>Подробная информация по наблюдению</h1>
+    <div class="content-block">
         <h2>👤 Пользователь: <span id="user-name"></span></h2>
         <h3>📅 Дата: <span id="observation-date"></span></h3>
         <h3>📍 Место: <span id="observation-place"></span></h3>
     </div>
-    <table class="observation-table">
-        <thead>
-            <tr>
-                <th>Время</th>
-                <th>Погода</th>
-                <th>Яркость</th>
-                <th>Интенсивность</th>
-            </tr>
-        </thead>
-        <tbody id="observations-table">
-        </tbody>
-    </table>
+    
+        <table class="observation-table">
+            <thead>
+                <tr>
+                    <th>Время</th>
+                    <th>Погода</th>
+                    <th>Яркость</th>
+                    <th>Интенсивность</th>
+                </tr>
+            </thead>
+            <tbody id="observations-table">
+            </tbody>
+        </table>
+    </div>
+
+
+        <div class="content">
+            <div class="graph-container">
+                <div class="graph-header">
+                    <h2 id="graphTitle">Яркость</h2>
+                </div>
+                <canvas id="myChart"></canvas>
+                
+                <div class="controls">
+                    <button class="control-btn active" onclick="changeData('brightness')">Яркость</button>
+                    <button class="control-btn" onclick="changeData('weather')">Погода</button>
+                    <button class="control-btn" onclick="changeData('intensity')">Интенсивность</button>
+                </div>
+            </div>
+        </div>
+
+    
     <footer>
         <div1 class="footer-container">
             <div1 class="footer-column">

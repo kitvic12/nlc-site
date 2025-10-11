@@ -74,7 +74,7 @@ async function drawGraph() {
     ctx.moveTo(padding, canvas.height - padding);
     ctx.lineTo(canvas.width - padding, canvas.height - padding);
     ctx.stroke();
-    ctx.fillStyle = '#000';
+    ctx.fillStyle = '#ffffffff';
     ctx.font = '16px Arial';
     ctx.textAlign = 'center';
     points.forEach((point, index) => {
@@ -89,7 +89,7 @@ async function drawGraph() {
 
     ctx.textAlign = 'right';
     ctx.font = '14px Arial';
-    ctx.fillStyle = '#000';
+    ctx.fillStyle = '#ffffffff';
     
     yAxisLabels.forEach((label, index) => {
         const value = index;

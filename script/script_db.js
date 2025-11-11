@@ -22,7 +22,7 @@ window.onload = highlightCurrentPageButton;
 async function loadObservations() {
     try {
         const local = 'http://localhost:5000/api/data';
-        const server = 'https://anttech.ddns.net/kitvic/api/data';
+        const server = 'https://antcloud.ddns.net/kitvic/api/data';
         const response = await fetch(server);
         const data = await response.json();
         

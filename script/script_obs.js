@@ -157,7 +157,7 @@ async function getCurrentData(dataType) {
             return [];
         }
         
-        const response = await fetch('https://anttech.ddns.net/kitvic/api/data');
+        const response = await fetch('https://antcloud.ddns.net/kitvic/api/data');
         const data = await response.json();
         
         const dateGroup = data.data.find(d => d.date === date);
